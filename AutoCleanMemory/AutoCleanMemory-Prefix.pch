@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'AutoCleanMemory' target in the 'AutoCleanMemory' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#ifdef DEBUG
+#   define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#   define NSLog(...)
+#endif

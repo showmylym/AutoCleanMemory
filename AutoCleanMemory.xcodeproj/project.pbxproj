@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A715BE4E175ED47600096414 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A715BE4D175ED47600096414 /* Cocoa.framework */; };
+		A715BE58175ED47600096414 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A715BE56175ED47600096414 /* InfoPlist.strings */; };
+		A715BE5A175ED47600096414 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A715BE59175ED47600096414 /* main.m */; };
+		A715BE5E175ED47600096414 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A715BE5C175ED47600096414 /* Credits.rtf */; };
+		A715BE61175ED47600096414 /* FSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A715BE60175ED47600096414 /* FSAppDelegate.m */; };
+		A715BE64175ED47600096414 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A715BE62175ED47600096414 /* MainMenu.xib */; };
+		A715BE70175ED74600096414 /* FSPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A715BE6E175ED74600096414 /* FSPopViewController.m */; };
+		A715BE71175ED74600096414 /* FSPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A715BE6F175ED74600096414 /* FSPopViewController.xib */; };
+		A715BE73175ED98700096414 /* purge in Resources */ = {isa = PBXBuildFile; fileRef = A715BE72175ED98700096414 /* purge */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A715BE4A175ED47600096414 /* AutoCleanMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCleanMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A715BE4D175ED47600096414 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A715BE50175ED47600096414 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A715BE51175ED47600096414 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A715BE52175ED47600096414 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A715BE55175ED47600096414 /* AutoCleanMemory-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutoCleanMemory-Info.plist"; sourceTree = "<group>"; };
+		A715BE57175ED47600096414 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A715BE59175ED47600096414 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A715BE5B175ED47600096414 /* AutoCleanMemory-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoCleanMemory-Prefix.pch"; sourceTree = "<group>"; };
+		A715BE5D175ED47600096414 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		A715BE5F175ED47600096414 /* FSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
+		A715BE60175ED47600096414 /* FSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
+		A715BE63175ED47600096414 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A715BE6D175ED74600096414 /* FSPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPopViewController.h; sourceTree = "<group>"; };
+		A715BE6E175ED74600096414 /* FSPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPopViewController.m; sourceTree = "<group>"; };
+		A715BE6F175ED74600096414 /* FSPopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSPopViewController.xib; sourceTree = "<group>"; };
+		A715BE72175ED98700096414 /* purge */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = purge; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A715BE47175ED47600096414 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A715BE4E175ED47600096414 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A715BE41175ED47600096414 = {
+			isa = PBXGroup;
+			children = (
+				A715BE53175ED47600096414 /* AutoCleanMemory */,
+				A715BE4C175ED47600096414 /* Frameworks */,
+				A715BE4B175ED47600096414 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A715BE4B175ED47600096414 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A715BE4A175ED47600096414 /* AutoCleanMemory.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A715BE4C175ED47600096414 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A715BE4D175ED47600096414 /* Cocoa.framework */,
+				A715BE4F175ED47600096414 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A715BE4F175ED47600096414 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A715BE50175ED47600096414 /* AppKit.framework */,
+				A715BE51175ED47600096414 /* CoreData.framework */,
+				A715BE52175ED47600096414 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A715BE53175ED47600096414 /* AutoCleanMemory */ = {
+			isa = PBXGroup;
+			children = (
+				A715BE5F175ED47600096414 /* FSAppDelegate.h */,
+				A715BE60175ED47600096414 /* FSAppDelegate.m */,
+				A715BE62175ED47600096414 /* MainMenu.xib */,
+				A715BE6D175ED74600096414 /* FSPopViewController.h */,
+				A715BE6E175ED74600096414 /* FSPopViewController.m */,
+				A715BE6F175ED74600096414 /* FSPopViewController.xib */,
+				A715BE72175ED98700096414 /* purge */,
+				A715BE54175ED47600096414 /* Supporting Files */,
+			);
+			path = AutoCleanMemory;
+			sourceTree = "<group>";
+		};
+		A715BE54175ED47600096414 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A715BE55175ED47600096414 /* AutoCleanMemory-Info.plist */,
+				A715BE56175ED47600096414 /* InfoPlist.strings */,
+				A715BE59175ED47600096414 /* main.m */,
+				A715BE5B175ED47600096414 /* AutoCleanMemory-Prefix.pch */,
+				A715BE5C175ED47600096414 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A715BE49175ED47600096414 /* AutoCleanMemory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A715BE67175ED47600096414 /* Build configuration list for PBXNativeTarget "AutoCleanMemory" */;
+			buildPhases = (
+				A715BE46175ED47600096414 /* Sources */,
+				A715BE47175ED47600096414 /* Frameworks */,
+				A715BE48175ED47600096414 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoCleanMemory;
+			productName = AutoCleanMemory;
+			productReference = A715BE4A175ED47600096414 /* AutoCleanMemory.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A715BE42175ED47600096414 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = FormsSyntron;
+			};
+			buildConfigurationList = A715BE45175ED47600096414 /* Build configuration list for PBXProject "AutoCleanMemory" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A715BE41175ED47600096414;
+			productRefGroup = A715BE4B175ED47600096414 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A715BE49175ED47600096414 /* AutoCleanMemory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A715BE48175ED47600096414 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A715BE58175ED47600096414 /* InfoPlist.strings in Resources */,
+				A715BE5E175ED47600096414 /* Credits.rtf in Resources */,
+				A715BE64175ED47600096414 /* MainMenu.xib in Resources */,
+				A715BE71175ED74600096414 /* FSPopViewController.xib in Resources */,
+				A715BE73175ED98700096414 /* purge in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A715BE46175ED47600096414 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A715BE5A175ED47600096414 /* main.m in Sources */,
+				A715BE61175ED47600096414 /* FSAppDelegate.m in Sources */,
+				A715BE70175ED74600096414 /* FSPopViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A715BE56175ED47600096414 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A715BE57175ED47600096414 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A715BE5C175ED47600096414 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A715BE5D175ED47600096414 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		A715BE62175ED47600096414 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A715BE63175ED47600096414 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A715BE65175ED47600096414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A715BE66175ED47600096414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A715BE68175ED47600096414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AutoCleanMemory/AutoCleanMemory-Prefix.pch";
+				INFOPLIST_FILE = "AutoCleanMemory/AutoCleanMemory-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A715BE69175ED47600096414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AutoCleanMemory/AutoCleanMemory-Prefix.pch";
+				INFOPLIST_FILE = "AutoCleanMemory/AutoCleanMemory-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A715BE45175ED47600096414 /* Build configuration list for PBXProject "AutoCleanMemory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A715BE65175ED47600096414 /* Debug */,
+				A715BE66175ED47600096414 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A715BE67175ED47600096414 /* Build configuration list for PBXNativeTarget "AutoCleanMemory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A715BE68175ED47600096414 /* Debug */,
+				A715BE69175ED47600096414 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A715BE42175ED47600096414 /* Project object */;
+}
