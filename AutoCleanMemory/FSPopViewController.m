@@ -73,10 +73,10 @@
     double converteredValue = 0.0;
     if (originalValue >= 1000000000L) {
         converteredValue = originalValue / 1024.0 / 1024.0 / 1024.0;
-        string = [NSString stringWithFormat:@"%.2lf GB Free", converteredValue];
+        string = [NSString stringWithFormat:@"%.2lf GB", converteredValue];
     } else {
         converteredValue = originalValue / 1024.0 /1024.0;
-        string = [NSString stringWithFormat:@"%.0lf MB Free", converteredValue];
+        string = [NSString stringWithFormat:@"%.0lf MB", converteredValue];
     }
     return string;
 }
@@ -249,11 +249,13 @@
         }
         
         NSUserNotification * userNotification = [NSUserNotification new];
-        [userNotification setTitle:@"Result"];
-        [userNotification setSubtitle:[NSString stringWithFormat:@"%@ Freed", memoryDiffString]];
+        [userNotification setTitle:@"清理报告:"];
+        [userNotification setSubtitle:[NSString stringWithFormat:@"清理了%@", memoryDiffString]];
+
         [userNotification setDeliveryDate:[NSDate date]];
         [userNotification setSoundName:NSUserNotificationDefaultSoundName];
         NSUserNotificationCenter * userNotificationCenter = [NSUserNotificationCenter defaultUserNotificationCenter];
+        [userNotificationCenter removeAllDeliveredNotifications];
         [userNotificationCenter scheduleNotification:userNotification];
         [userNotificationCenter deliverNotification:userNotification];
     }

@@ -46,7 +46,7 @@
     NSDictionary * userInfo = note.userInfo;
     if (userInfo != nil) {
         NSString * freedMemoryString = [userInfo valueForKey:kmem_free];
-        [self showInfoToStatusBarItem:freedMemoryString];
+        [self showInfoToStatusBarItem:[freedMemoryString stringByAppendingString:@"可用"]];
     }
     
 }

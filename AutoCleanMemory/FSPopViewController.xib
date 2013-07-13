@@ -42,7 +42,7 @@
 					<object class="NSButton" id="981578608">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{202, 208}, {48, 32}}</string>
+						<string key="NSFrame">{{194, 208}, {56, 32}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="245678886"/>
@@ -51,8 +51,8 @@
 						<object class="NSButtonCell" key="NSCell" id="210039963">
 							<int key="NSCellFlags">67108864</int>
 							<int key="NSCellFlags2">134217728</int>
-							<string key="NSContents">X</string>
-							<object class="NSFont" key="NSSupport">
+							<string key="NSContents">退出</string>
+							<object class="NSFont" key="NSSupport" id="125520112">
 								<string key="NSName">STHeitiSC-Light</string>
 								<double key="NSSize">13</double>
 								<int key="NSfFlags">16</int>
@@ -71,7 +71,7 @@
 					<object class="NSTextField" id="480090998">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{117, 219}, {130, 17}}</string>
+						<string key="NSFrame">{{120, 219}, {80, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="981578608"/>
@@ -112,7 +112,7 @@
 					<object class="NSTextField" id="723065616">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 219}, {47, 17}}</string>
+						<string key="NSFrame">{{17, 219}, {43, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="480090998"/>
@@ -121,8 +121,8 @@
 						<object class="NSTextFieldCell" key="NSCell" id="37478865">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">Active:</string>
-							<reference key="NSSupport" ref="1064387342"/>
+							<string key="NSContents">活跃：</string>
+							<reference key="NSSupport" ref="125520112"/>
 							<string key="NSCellIdentifier">_NS:1535</string>
 							<reference key="NSControlView" ref="723065616"/>
 							<reference key="NSBackgroundColor" ref="686343440"/>
@@ -133,7 +133,7 @@
 					<object class="NSTextField" id="427130343">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{117, 74}, {130, 17}}</string>
+						<string key="NSFrame">{{120, 74}, {80, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="139489974"/>
@@ -154,7 +154,7 @@
 					<object class="NSTextField" id="645658018">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 74}, {95, 17}}</string>
+						<string key="NSFrame">{{17, 74}, {69, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="427130343"/>
@@ -163,8 +163,8 @@
 						<object class="NSTextFieldCell" key="NSCell" id="958327503">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">Total Memory:</string>
-							<reference key="NSSupport" ref="1064387342"/>
+							<string key="NSContents">物理内存：</string>
+							<reference key="NSSupport" ref="125520112"/>
 							<string key="NSCellIdentifier">_NS:1535</string>
 							<reference key="NSControlView" ref="645658018"/>
 							<reference key="NSBackgroundColor" ref="686343440"/>
@@ -175,7 +175,7 @@
 					<object class="NSTextField" id="859379294">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{117, 103}, {130, 17}}</string>
+						<string key="NSFrame">{{120, 103}, {80, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="645658018"/>
@@ -196,7 +196,7 @@
 					<object class="NSTextField" id="328531908">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 103}, {82, 17}}</string>
+						<string key="NSFrame">{{17, 103}, {56, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="859379294"/>
@@ -205,8 +205,8 @@
 						<object class="NSTextFieldCell" key="NSCell" id="41002306">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">Total usage:</string>
-							<reference key="NSSupport" ref="1064387342"/>
+							<string key="NSContents">总使用：</string>
+							<reference key="NSSupport" ref="125520112"/>
 							<string key="NSCellIdentifier">_NS:1535</string>
 							<reference key="NSControlView" ref="328531908"/>
 							<reference key="NSBackgroundColor" ref="686343440"/>
@@ -217,7 +217,7 @@
 					<object class="NSButton" id="139489974">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{18, 21}, {96, 18}}</string>
+						<string key="NSFrame">{{18, 21}, {100, 18}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="67615101"/>
@@ -226,8 +226,8 @@
 						<object class="NSButtonCell" key="NSCell" id="712649616">
 							<int key="NSCellFlags">-2080374784</int>
 							<int key="NSCellFlags2">268435456</int>
-							<string key="NSContents">Auto-Purge</string>
-							<reference key="NSSupport" ref="1064387342"/>
+							<string key="NSContents">开启自动清理</string>
+							<reference key="NSSupport" ref="125520112"/>
 							<string key="NSCellIdentifier">_NS:9</string>
 							<reference key="NSControlView" ref="139489974"/>
 							<int key="NSButtonFlags">1211912448</int>
@@ -249,7 +249,7 @@
 					<object class="NSButton" id="67615101">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{142, 13}, {108, 32}}</string>
+						<string key="NSFrame">{{158, 13}, {92, 32}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -258,8 +258,8 @@
 						<object class="NSButtonCell" key="NSCell" id="856289877">
 							<int key="NSCellFlags">67108864</int>
 							<int key="NSCellFlags2">134217728</int>
-							<string key="NSContents">Purge Now</string>
-							<reference key="NSSupport" ref="1064387342"/>
+							<string key="NSContents">立即清理</string>
+							<reference key="NSSupport" ref="125520112"/>
 							<string key="NSCellIdentifier">_NS:9</string>
 							<reference key="NSControlView" ref="67615101"/>
 							<int key="NSButtonFlags">-2038284288</int>
@@ -274,7 +274,7 @@
 					<object class="NSTextField" id="316410969">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{117, 132}, {130, 17}}</string>
+						<string key="NSFrame">{{120, 132}, {80, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="328531908"/>
@@ -295,7 +295,7 @@
 					<object class="NSTextField" id="229839762">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{117, 161}, {130, 17}}</string>
+						<string key="NSFrame">{{120, 161}, {80, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="998628954"/>
@@ -316,7 +316,7 @@
 					<object class="NSTextField" id="17122269">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{117, 190}, {130, 17}}</string>
+						<string key="NSFrame">{{120, 190}, {80, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="640240126"/>
@@ -358,7 +358,7 @@
 					<object class="NSTextField" id="998628954">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 132}, {35, 17}}</string>
+						<string key="NSFrame">{{17, 132}, {43, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="316410969"/>
@@ -367,8 +367,8 @@
 						<object class="NSTextFieldCell" key="NSCell" id="176259314">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">Free:</string>
-							<reference key="NSSupport" ref="1064387342"/>
+							<string key="NSContents">空闲：</string>
+							<reference key="NSSupport" ref="125520112"/>
 							<string key="NSCellIdentifier">_NS:1535</string>
 							<reference key="NSControlView" ref="998628954"/>
 							<reference key="NSBackgroundColor" ref="686343440"/>
@@ -379,7 +379,7 @@
 					<object class="NSTextField" id="640240126">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 161}, {44, 17}}</string>
+						<string key="NSFrame">{{17, 161}, {43, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="229839762"/>
@@ -388,8 +388,8 @@
 						<object class="NSTextFieldCell" key="NSCell" id="913050065">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">Wired:</string>
-							<reference key="NSSupport" ref="1064387342"/>
+							<string key="NSContents">联动：</string>
+							<reference key="NSSupport" ref="125520112"/>
 							<string key="NSCellIdentifier">_NS:1535</string>
 							<reference key="NSControlView" ref="640240126"/>
 							<reference key="NSBackgroundColor" ref="686343440"/>
@@ -400,7 +400,7 @@
 					<object class="NSTextField" id="245678886">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 190}, {57, 17}}</string>
+						<string key="NSFrame">{{17, 190}, {56, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="17122269"/>
@@ -409,8 +409,8 @@
 						<object class="NSTextFieldCell" key="NSCell" id="233228163">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">Inactive:</string>
-							<reference key="NSSupport" ref="1064387342"/>
+							<string key="NSContents">不活跃：</string>
+							<reference key="NSSupport" ref="125520112"/>
 							<string key="NSCellIdentifier">_NS:1535</string>
 							<reference key="NSControlView" ref="245678886"/>
 							<reference key="NSBackgroundColor" ref="686343440"/>
