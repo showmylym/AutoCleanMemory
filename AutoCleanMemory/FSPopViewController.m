@@ -49,8 +49,8 @@
     NSString * lastVersion = [userDefaults valueForKey:kLastVersion];
     NSString * thisVersion = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"];
     if (lastVersion == nil || (lastVersion != nil && ![lastVersion isEqualToString:thisVersion])) {
-        [userDefaults setBool:YES forKey:kShouldAutoPurge];
-        _needAutoPurge = YES;
+        [userDefaults setBool:NO forKey:kShouldAutoPurge];
+        _needAutoPurge = NO;
     } else {
         _needAutoPurge = [userDefaults boolForKey:kShouldAutoPurge];
     }
