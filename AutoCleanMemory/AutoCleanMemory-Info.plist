@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>logo.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>FormsSyntron.tools.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>RayManning.tools.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -29,7 +29,7 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2013年 FormsSyntron. All rights reserved.</string>
+	<string>Copyright © 2013 RayManning. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

@@ -2,8 +2,8 @@
 //  FSPopViewController.m
 //  AutoCleanMemory
 //
-//  Created by Leiyiming on 13-6-5.
-//  Copyright (c) 2013年 FormsSyntron. All rights reserved.
+//  Created by Jerry on 13-6-5.
+//  Copyright (c) 2013年 RayManning. All rights reserved.
 //
 
 #import "FSPopViewController.h"
@@ -107,7 +107,7 @@
     
     //set flag to judge whether need purge and change status bar item string color
     [self setFlagByFreedMemory:mem_free andInactiveMemory:mem_inactive];
-    NSLog(@"used: %ld free: %ld total: %ld pageSize: %ld", mem_used, mem_free, mem_total, pagesize);
+//    NSLog(@"used: %ld free: %ld total: %ld pageSize: %ld", mem_used, mem_free, mem_total, pagesize);
     _currentMemoryRemained = mem_free;
     
     NSString * memoryUsedString     = [self generateNumberFromValue:mem_used];
@@ -162,7 +162,7 @@
         NSTimeInterval timeInterval = timer.timeInterval;
         while (timeInterval -- > 0) {
             _autoPurgeCount ++;
-            NSLog(@"timeInterval : %lf, _autoPurgeCount: %ld", timeInterval, _autoPurgeCount);
+//            NSLog(@"timeInterval : %lf, _autoPurgeCount: %ld", timeInterval, _autoPurgeCount);
         }
         [self fireAutoPurge];
         
@@ -249,8 +249,8 @@
         }
         
         NSUserNotification * userNotification = [NSUserNotification new];
-        [userNotification setTitle:@"清理报告:"];
-        [userNotification setSubtitle:[NSString stringWithFormat:@"清理了%@", memoryDiffString]];
+        [userNotification setTitle:@"Purging Report:"];
+        [userNotification setSubtitle:[NSString stringWithFormat:@"Purged %@", memoryDiffString]];
 
         [userNotification setDeliveryDate:[NSDate date]];
         [userNotification setSoundName:NSUserNotificationDefaultSoundName];

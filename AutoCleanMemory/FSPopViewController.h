@@ -2,8 +2,8 @@
 //  FSPopViewController.h
 //  AutoCleanMemory
 //
-//  Created by Leiyiming on 13-6-5.
-//  Copyright (c) 2013年 FormsSyntron. All rights reserved.
+//  Created by Jerry on 13-6-5.
+//  Copyright (c) 2013年 RayManning. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
