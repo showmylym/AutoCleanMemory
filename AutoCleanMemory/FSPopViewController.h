@@ -27,9 +27,6 @@ extern NSString * const MemoryUsageNeedRefreshNotification;
 @property (weak) IBOutlet NSTextField *totalUsageTextField;
 @property (weak) IBOutlet NSTextField *totalMemoryTextField;
 @property (weak) IBOutlet NSTextField *activeTextField;
-@property (weak) IBOutlet NSButton *autoPurgeButton;
 
-- (IBAction)autoPurgeButtonPressed:(id)sender;
-- (IBAction)purgeNowButtonPressed:(id)sender;
 - (IBAction)exitButtonPressed:(id)sender;
 @end

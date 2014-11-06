@@ -11,7 +11,7 @@
 
 @interface FSAppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, strong) NSEvent * popoverTransiencyMonitor;
 
 @property (nonatomic, strong) NSStatusItem * statusBarItem;
 

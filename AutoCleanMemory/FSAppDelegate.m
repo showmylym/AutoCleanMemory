@@ -27,22 +27,31 @@
         self.popover.contentViewController = self.popViewController;
         self.popover.contentSize = self.popViewController.view.frame.size;
     }
-
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(memoryUsageNeedRefresh:) name:MemoryUsageNeedRefreshNotification object:nil];
 
 }
 
-
-- (void) popUpPopover:(id)sender {
+- (void)popUpPopover:(id)sender {
+    if (self.popoverTransiencyMonitor == nil) {
+        self.popoverTransiencyMonitor = [NSEvent addGlobalMonitorForEventsMatchingMask:NSLeftMouseUpMask | NSRightMouseUpMask handler:^(NSEvent * event) {
+            [self dismissPopover:sender];
+        }];
+    }
     [self.popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
 }
 
-
+- (void)dismissPopover:(id)sender {
+    if (self.popoverTransiencyMonitor != nil) {
+        [self.popover close];
+        [NSEvent removeMonitor:self.popoverTransiencyMonitor];
+        self.popoverTransiencyMonitor = nil;
+    }
+}
 
 
 #pragma mark - update memory info of status item
 //notification call back
-- (void) memoryUsageNeedRefresh:(NSNotification *)note {
+- (void)memoryUsageNeedRefresh:(NSNotification *)note {
     NSDictionary * userInfo = note.userInfo;
     if (userInfo != nil) {
         NSString * freedMemoryString = [userInfo valueForKey:kmem_free];
@@ -50,7 +59,7 @@
     }
     
 }
-- (void) showInfoToStatusBarItem:(NSString *)freedMemoryString {
+- (void)showInfoToStatusBarItem:(NSString *)freedMemoryString {
     
     NSFont * __strong font = [NSFont fontWithName:@"Lucida Grande" size:12.0f];
     NSMutableAttributedString * muAttributedString = [[NSMutableAttributedString alloc] initWithString:freedMemoryString];
