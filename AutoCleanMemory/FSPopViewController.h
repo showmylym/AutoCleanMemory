@@ -10,12 +10,13 @@
 
 extern NSString * const MemoryUsageNeedRefreshNotification;
 
-#define kmem_used       @"mem_used"
-#define kmem_free       @"mem_free"
-#define kmem_total      @"mem_total"
-#define kmem_active     @"mem_active"
-#define kmem_inactive   @"mem_inactive"
-#define kmem_wired      @"mem_wired"
+#define kmem_used        @"mem_used"
+#define kmem_free        @"mem_free"
+#define kmem_total       @"mem_total"
+#define kmem_active      @"mem_active"
+#define kmem_inactive    @"mem_inactive"
+#define kmem_wired       @"mem_wired"
+#define kmem_compression @"mem_compression"
 
 @interface FSPopViewController : NSViewController
 
@@ -24,9 +25,11 @@ extern NSString * const MemoryUsageNeedRefreshNotification;
 @property (weak) IBOutlet NSTextField *inactiveUsageTextField;
 @property (weak) IBOutlet NSTextField *wiredUsageTextField;
 @property (weak) IBOutlet NSTextField *freeTextField;
+@property (weak) IBOutlet NSTextField *activeTextField;
+@property (weak) IBOutlet NSTextField *compressedMemoryTextField;
 @property (weak) IBOutlet NSTextField *totalUsageTextField;
 @property (weak) IBOutlet NSTextField *totalMemoryTextField;
-@property (weak) IBOutlet NSTextField *activeTextField;
+
 
 - (IBAction)exitButtonPressed:(id)sender;
 @end

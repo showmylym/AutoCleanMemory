@@ -12,9 +12,7 @@
 
 #define kLastVersion        @"LastVersion"
 
-#define FreedMemoryPoint        200
-#define InactiveMemoryPoint     100
-#define PurgeTimeInterval       1
+const int warningFreedMemValue =       200;
 
 @interface FSPopViewController (){
     unsigned long _currentMemoryRemained;
@@ -72,47 +70,48 @@
 }
 
 - (NSDictionary *) currentMemoryInfo {
-
-    mach_port_t host_port;
-    mach_msg_type_number_t host_size;
+    mach_port_t host_port = mach_host_self();
+    vm_statistics64_data_t vm_stat64;
+    mach_msg_type_number_t host_info64_outCnt = sizeof(vm_statistics64_data_t) / sizeof(natural_t);
+    
     vm_size_t pagesize;
-    
-    host_port = mach_host_self();
-    host_size = sizeof(vm_statistics_data_t) / sizeof(integer_t);
     host_page_size(host_port, &pagesize);
-    
-    vm_statistics_data_t vm_stat;
 
-    if (host_statistics(host_port, HOST_VM_INFO, (host_info_t)&vm_stat, &host_size) != KERN_SUCCESS)
+    
+    if (host_statistics64(host_port, HOST_VM_INFO64, (host_info64_t)&vm_stat64, &host_info64_outCnt) != KERN_SUCCESS)
         NSLog(@"Failed to fetch vm statistics");
     
 
     /* Stats in bytes */
-    unsigned long mem_used      = (vm_stat.active_count +
-                                   vm_stat.inactive_count +
-                                   vm_stat.wire_count) * (unsigned long)pagesize;
-    unsigned long mem_free      = vm_stat.free_count * (unsigned long)pagesize;
-    unsigned long mem_total     = (unsigned long)mem_used + (unsigned long)mem_free;
-    unsigned long mem_active    = vm_stat.active_count * (unsigned long)pagesize;
-    unsigned long mem_inactive  = vm_stat.inactive_count * (unsigned long)pagesize;
-    unsigned long mem_wired     = vm_stat.wire_count * (unsigned long)pagesize;
+    unsigned long mem_free        = vm_stat64.free_count * (unsigned long)pagesize;
+    unsigned long mem_active      = vm_stat64.active_count * (unsigned long)pagesize;
+    unsigned long mem_inactive    = vm_stat64.inactive_count * (unsigned long)pagesize;
+    unsigned long mem_wired       = vm_stat64.wire_count * (unsigned long)pagesize;
+    unsigned long mem_compression = vm_stat64.compressor_page_count * (unsigned long)pagesize;
+    unsigned long mem_used        = (vm_stat64.active_count +
+                                     vm_stat64.inactive_count +
+                                     vm_stat64.wire_count +
+                                     vm_stat64.compressor_page_count) * (unsigned long)pagesize;
+    unsigned long mem_total       = mem_used + mem_free ;
+
     
     //set flag to judge whether need purge and change status bar item string color
     [self setFlagByFreedMemory:mem_free andInactiveMemory:mem_inactive];
 //    NSLog(@"used: %ld free: %ld total: %ld pageSize: %ld", mem_used, mem_free, mem_total, pagesize);
     _currentMemoryRemained = mem_free;
     
-    NSString * memoryUsedString     = [self memStringFromValue:mem_used];
-    NSString * memoryFreeString     = [self memStringFromValue:mem_free];
-    NSString * memoryTotalString    = [self memStringFromValue:mem_total];
-    NSString * memoryActiveString   = [self memStringFromValue:mem_active];
-    NSString * memoryInactiveString = [self memStringFromValue:mem_inactive];
-    NSString * memoryWiredString    = [self memStringFromValue:mem_wired];
+    NSString * memoryUsedString        = [self memStringFromValue:mem_used];
+    NSString * memoryFreeString        = [self memStringFromValue:mem_free];
+    NSString * memoryTotalString       = [self memStringFromValue:mem_total];
+    NSString * memoryActiveString      = [self memStringFromValue:mem_active];
+    NSString * memoryInactiveString    = [self memStringFromValue:mem_inactive];
+    NSString * memoryWiredString       = [self memStringFromValue:mem_wired];
+    NSString * memoryCompressionString = [self memStringFromValue:mem_compression];
 
-    
     NSDictionary * dict = @{kmem_used:memoryUsedString, kmem_free:memoryFreeString,
                             kmem_total:memoryTotalString, kmem_active:memoryActiveString,
-                            kmem_inactive:memoryInactiveString, kmem_wired:memoryWiredString};
+                            kmem_inactive:memoryInactiveString, kmem_wired:memoryWiredString,
+                            kmem_compression:memoryCompressionString};
     return dict;
 }
 
@@ -144,7 +143,7 @@
 #pragma mark - private methods
 
 - (void) setFlagByFreedMemory:(unsigned long)mem_free andInactiveMemory:(unsigned long)mem_inactive {
-    if (mem_free < FreedMemoryPoint * 1024L * 1024L) {
+    if (mem_free < warningFreedMemValue * 1024L * 1024L) {
         _needUseRedColorToShowFreedMemory = YES;
     } else {
         _needUseRedColorToShowFreedMemory = NO;
@@ -155,13 +154,14 @@
 
 - (void) refreshControlsValue:(NSDictionary *)userInfo {
     if (userInfo != nil) {
-        NSString * memoryUsedString     = [userInfo valueForKey:kmem_used];
-        NSString * memoryFreeString     = [userInfo valueForKey:kmem_free];
-        NSString * memoryTotalString    = [userInfo valueForKey:kmem_total];
-        NSString * memoryActiveString   = [userInfo valueForKey:kmem_active];
-        NSString * memoryInactiveString = [userInfo valueForKey:kmem_inactive];
-        NSString * memoryWiredString    = [userInfo valueForKey:kmem_wired];
-        
+        NSString * memoryUsedString        = [userInfo valueForKey:kmem_used];
+        NSString * memoryFreeString        = [userInfo valueForKey:kmem_free];
+        NSString * memoryActiveString      = [userInfo valueForKey:kmem_active];
+        NSString * memoryInactiveString    = [userInfo valueForKey:kmem_inactive];
+        NSString * memoryWiredString       = [userInfo valueForKey:kmem_wired];
+        NSString * memoryCompressionString = [userInfo valueForKey:kmem_compression];
+        NSString * memoryTotalString       = [userInfo valueForKey:kmem_total];
+
         //update Controls
         [self.totalUsageTextField.cell setTitle:memoryUsedString];
         [self.freeTextField.cell setTitle:memoryFreeString];
@@ -169,6 +169,7 @@
         [self.activeTextField.cell setTitle:memoryActiveString];
         [self.inactiveUsageTextField.cell setTitle:memoryInactiveString];
         [self.wiredUsageTextField.cell setTitle:memoryWiredString];
+        [self.compressedMemoryTextField.cell setTitle:memoryCompressionString];
     }
 }
 
